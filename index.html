@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digitize Book Pro</title>
+    <link rel="icon" href="img/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!--name of website-->
+      <div class="top">
+        <div id="same">
+          <div class="heading">
+            <p class="one">Digitize</p>
+            <p class="two">Book Pro</p>
+          </div>
+          <p class="slogan">It always seems impossible until it's done</p>
+
+          <img id="temp" src="img/template1.png" />
+
+          <img class="temp1" src="img/template2.png" />
+        </div>
+      </div>
+      <!--navbar in top -->
+      <header class="header">
+        <p class="logo">dB.</p>
+        <nav class="info">
+          <a href="#top">Home</a>
+          <a href="about-us/about-us.html" target="_blank">About Us </a>
+          <a href="contact-us/contact-us.html" target="_blank">Contact </a>
+        </nav>
+      </header>
+
+      <hr />
+      <!--programmes-->
+      <div class="header1">
+        <div class="engineering">
+          <a href="#">ENGINEERING</a>
+          <!--<button id="b1" type="button"></button>-->
+        </div>
+        <div class="arts">
+          <a href="#">ARTS & SCIENCE</a>
+          <!-- <button id="b2" type="button">ARTS & SCIENCE</button>-->
+        </div>
+      </div>
+      <a href="#top"><img id="arrow" src="img/arrow.png" /></a>
+      <script>
+        const temp = document.getElementById("temp");
+        const arrow = document.getElementById("arrow");
+
+        temp.addEventListener("click", function () {
+          document.body.classList.toggle("dark");
+
+          // Change image source based on dark mode
+          if (document.body.classList.contains("dark")) {
+            arrow.src = "img/invert_arrow.png"; // Dark mode image
+          } else {
+            arrow.src = "img/arrow.png"; // Light mode image
+          }
+        });
+      </script>
+    </main>
+  </body>
+</html>
